@@ -5,12 +5,16 @@
  */
 
 $( document ).ready(function() {
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
     
     $("#menu").hide();
-    
     $( window ).scroll(function() {
         $( "#menu" ).fadeIn(1000);
-      });
+    });
+    
+    
+
+
 
 
 
