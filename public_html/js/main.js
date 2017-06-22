@@ -4,4 +4,14 @@
  * and open the template in the editor.
  */
 
+$( document ).ready(function() {
+    
+    $("#menu").hide();
+    
+    $( window ).scroll(function() {
+        $( "#menu" ).fadeIn(1000);
+      });
 
+
+
+});
