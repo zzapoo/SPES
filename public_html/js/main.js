@@ -7,15 +7,17 @@
 $( document ).ready(function() {
     $('.carousel.carousel-slider').carousel({fullWidth: true});
     
-    $("#menu").hide();
-    $( window ).scroll(function() {
-        $( "#menu" ).fadeIn(1000);
-    });
-    
-    
+//    $("#menu").hide();
+//    $( window ).scroll(function() {
+//        $( "#menu" ).fadeIn(1000);
+//    });
 
-
-
-
-
+    $(document).scroll(stick);
 });
+
+function stick(){
+    coordenadas = $("#menu")[0].getBoundingClientRect();
+    if(coordenadas.y == 0){
+        $("#menu").addClass("fixed");
+    }
+}
